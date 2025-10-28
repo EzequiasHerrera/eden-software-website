@@ -3,7 +3,7 @@
 :root {
     --background: #171717;
     --foreground: #fff;
-    --parallax-colors: linear-gradient(to bottom, #051227, #1e3a8a, #87ceeb);
+    --parallax-colors: linear-gradient(to bottom, #051227, #071936, #1e3a8a, #87ceeb);
 }
 
 @theme inline {
@@ -33,5 +33,5 @@ body {
 }
 
 .parallax-colors{
-  background: linear-gradient(to bottom, #0a1f44, #1e3a8a, #87ceeb);
+  background: linear-gradient(to bottom, #0b182e, #0a1f44, #1e3a8a, #87ceeb);
 }

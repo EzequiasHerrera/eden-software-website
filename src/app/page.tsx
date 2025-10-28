@@ -40,7 +40,7 @@ export default function Home() {
                     <div className="h-screen flex items-center justify-center">
                         <animated.h1
                             style={fadeIn}
-                            className="text-8xl max-w-sm leading-18 font-bold text-left"
+                            className="text-6xl md:text-8xl max-w-sm leading-12 md:leading-18 font-bold text-center md:text-left"
                         >
                             Eden{"<>"} Software.
                         </animated.h1>
@@ -50,7 +50,7 @@ export default function Home() {
                 {/* Este es el comienzo... */}
                 <ParallaxLayer offset={3} speed={0.3} sticky={{ start: 3, end: 5 }}>
                     <div className="h-screen flex items-center justify-center">
-                        <h2 className="text-7xl max-w-sm leading-12 font-semibold text-left">
+                        <h2 className="text-6xl md:text-7xl max-w-sm leading-13 font-semibold text-center md:text-left">
                             Este es el comienzo...
                         </h2>
                     </div>
@@ -85,10 +85,10 @@ export default function Home() {
                 ></ParallaxLayer>
 
                 {/* 🌳 Tierra */}
-                <ParallaxLayer offset={7} speed={0.3} sticky={{ start: 7, end: 7.8 }}>
+                <ParallaxLayer offset={7} speed={0.3} sticky={{ start: 7, end: 8 }}>
                     <div className="h-screen flex items-center justify-center">
-                        <h2 className="text-7xl font-semibold text-center">
-                            ...de algo realmente grande
+                        <h2 className="text-6xl md:text-7xl max-w-sm leading-13 font-semibold text-center md:text-left">
+                            de algo realmente grande
                         </h2>
                     </div>
                 </ParallaxLayer>
