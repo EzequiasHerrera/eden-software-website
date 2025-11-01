@@ -1,12 +1,13 @@
 "use client";
 import Image from "next/image";
 import { useState } from "react";
+import Button from "../Button/Button";
 
 const Header = () => {
 	const [menuOpen, setMenuOpen] = useState(false);
 
 	return (
-		<header className="bg-gray-900 fixed w-full flex justify-center">
+		<header className="bg-background fixed top-0 w-full flex justify-center p-5 antialiased">
 			<div className="w-full md:max-w-xl flex p-3 items-center gap-5 justify-between md:justify-center">
 				{/* <h1 className="text-2xl">Eden Software.</h1> */}
 				<Image
@@ -15,6 +16,7 @@ const Header = () => {
 					width={60}
 					height={60}
 					priority
+                    className="hover:scale-110 transition"
 				/>
 
 				{/* 🗒️ */}
@@ -26,16 +28,18 @@ const Header = () => {
 				<nav
 					className={`md:flex gap-8 ${menuOpen ? "block" : "hidden"} md:block`}
 				>
-					<a href="#hero" className="hover:text-blue-600">
+					<a href="#hero" className="hover:text-(--accent-color)">
 						Home
 					</a>
-					<a href="#about" className="hover:text-blue-600">
+					<a href="#about" className="hover:text-(--accent-color)">
 						About Us
 					</a>
-					<a href="#contact" className="hover:text-blue-600">
+					<a href="#contact" className="hover:text-(--accent-color)">
 						Pricing
 					</a>
 				</nav>
+                
+                <Button text="Sign In" url="/blog"></Button>
 
 				{/* 🍔 */}
 				<button
