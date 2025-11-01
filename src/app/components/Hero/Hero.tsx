@@ -1,5 +1,9 @@
 const Hero = () => {
-    return <></>;
+	return (
+    <section>
+        <h1>Eden Software.</h1>
+    </section>
+    );
 };
 
 export default Hero;

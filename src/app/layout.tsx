@@ -1,34 +1,40 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Geist, Geist_Mono, Inter } from "next/font/google";
 import "../styles/globals.css";
 
 const geistSans = Geist({
-    variable: "--font-geist-sans",
-    subsets: ["latin"],
+	variable: "--font-geist-sans",
+	subsets: ["latin"],
 });
 
 const geistMono = Geist_Mono({
-    variable: "--font-geist-mono",
-    subsets: ["latin"],
+	variable: "--font-geist-mono",
+	subsets: ["latin"],
+});
+
+const inter = Inter({
+	variable: "--font-inter",
+	subsets: ["latin"],
+	display: "swap",
 });
 
 export const metadata: Metadata = {
-    title: "Eden Software",
-    description: "El comienzo de algo grande...",
+	title: "Eden Software",
+	description: "El comienzo de algo grande...",
 };
 
 export default function RootLayout({
-    children,
+	children,
 }: Readonly<{
-    children: React.ReactNode;
+	children: React.ReactNode;
 }>) {
-    return (
-        <html lang="es">
-            <body
-                className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-            >
-                {children}
-            </body>
-        </html>
-    );
+	return (
+		<html lang="es">
+			<body
+				className={`${inter.variable} antialiased`}
+			>
+				{children}
+			</body>
+		</html>
+	);
 }
