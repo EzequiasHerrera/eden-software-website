@@ -2,25 +2,26 @@
 @import "tailwindcss-animated";
 
 :root {
-    --background: #000b11;
-    --foreground: #fff;
-    --gradient: linear-gradient(
-        to bottom,
-        #000b11 0%,
-        #030914 20%,
-        #0b212e 60%,
-        #1e3a8a 95%
-    );
-    --primary-color: #0b212e;
-    --accent-color: #72b0fb;
-    --accent-color-light: #d9e1f4;
+	--background: #000b11;
+	--foreground: #fff;
+	--gradient: linear-gradient(
+		to bottom,
+		#000b11 0%,
+		#030914 20%,
+		#0b212e 60%,
+		#1e3a8a 95%
+	);
+	--primary-color: #0b212e;
+	--accent-color: #72b0fb;
+	--accent-color-light: #d9e1f4;
+	--accent-color-dark: rgb(43, 88, 144);
 }
 
 @theme inline {
-    --color-background: var(--background);
-    --color-foreground: var(--foreground);
-    --font-sans: var(--font-geist-sans);
-    --font-mono: var(--font-geist-mono);
+	--color-background: var(--background);
+	--color-foreground: var(--foreground);
+	--font-sans: var(--font-geist-sans);
+	--font-mono: var(--font-geist-mono);
 }
 
 /* @media (prefers-color-scheme: dark) {
@@ -31,11 +32,7 @@
 } */
 
 body {
-    background: var(--gradient);
-    color: var(--foreground);
-    font-family: Helvetica, sans-serif;
-}
-
-.parallax-colors {
-    background: linear-gradient(to bottom, #0b182e, #0a1f44, #1e3a8a, #87ceeb);
+	background: var(--gradient);
+	color: var(--foreground);
+	font-family: Helvetica, sans-serif;
 }

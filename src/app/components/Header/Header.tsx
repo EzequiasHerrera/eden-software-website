@@ -2,54 +2,59 @@
 import Image from "next/image";
 import { useState } from "react";
 import Button from "../Button/Button";
+import Sidebar from "../Sidebar/Sidebar";
 
 const Header = () => {
-	const [menuOpen, setMenuOpen] = useState(false);
-
+	const [sidebarOpen, setSidebarOpen] = useState(false);
 	return (
-		<header className="bg-background fixed top-0 w-full flex justify-center p-5 antialiased">
-			<div className="w-full md:max-w-xl flex p-3 items-center gap-5 justify-between md:justify-center">
-				{/* <h1 className="text-2xl">Eden Software.</h1> */}
-				<Image
-					src="/images/eden_logo.png"
-					alt="Logo Eden Software"
-					width={60}
-					height={60}
-					priority
-                    className="hover:scale-110 transition"
-				/>
+		<>
+			<header className="bg-background fixed top-0 w-full flex p-5 justify-center antialiased">
+				<div className="w-full md:max-w-xl flex p-3 items-center gap-5 justify-between md:justify-center">
+					<a href="/">
+						<Image
+							src="/images/eden_logo.png"
+							alt="Logo Eden Software"
+							width={60}
+							height={60}
+							priority
+							className="hover:scale-110 transition cursor-pointer"
+						/>
+					</a>
 
-				{/* 🗒️ */}
-				{/*
-                // absolute
-                // left-1/2 → posiciona el borde izquierdo del elemento en el centro del contenedor
-                // -translate-x-1/2 → desplaza el elemento hacia la izquierda la mitad de su propio ancho para centrarlo completamente
-                */}
-				<nav
-					className={`md:flex gap-8 ${menuOpen ? "block" : "hidden"} md:block`}
-				>
-					<a href="#hero" className="hover:text-(--accent-color)">
-						Home
-					</a>
-					<a href="#about" className="hover:text-(--accent-color)">
-						About Us
-					</a>
-					<a href="#contact" className="hover:text-(--accent-color)">
-						Pricing
-					</a>
-				</nav>
-                
-                <Button text="Sign In" url="/blog"></Button>
+					{/* 🗒️ */}
+					<nav className={`gap-8 hidden md:flex`}>
+						<a href="#hero" className="hover:text-(--accent-color)">
+							Home
+						</a>
+						<a
+							href="#about"
+							className="hover:text-(--accent-color)"
+						>
+							About Us
+						</a>
+						<a
+							href="#contact"
+							className="hover:text-(--accent-color)"
+						>
+							Pricing
+						</a>
+					</nav>
 
-				{/* 🍔 */}
-				<button
-					className="md:hidden"
-					onClick={() => setMenuOpen(!menuOpen)}
-				>
-					☰
-				</button>
-			</div>
-		</header>
+					<div className="hidden md:block">
+						<Button text="Sign In" url="/blog"></Button>
+					</div>
+
+					{/* 🍔 */}
+					<button
+						className="hover:scale-110 transition md:hidden text-2xl cursor-pointer"
+						onClick={() => setSidebarOpen(!sidebarOpen)}
+					>
+						☰
+					</button>
+				</div>
+			</header>
+			{sidebarOpen && <Sidebar onClose={() => setSidebarOpen(false)} />}
+		</>
 	);
 };
 

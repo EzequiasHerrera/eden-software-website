@@ -1,0 +1,4 @@
+.btn_shadow {
+	box-shadow: #090b1c29 0px 2px 6px 0px,
+		var(--accent-color-light) 0px 1px 1px 0px inset;
+}

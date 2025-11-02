@@ -4,7 +4,6 @@ import Hero from "./components/Hero/Hero";
 const Home = () => {
     return (
         <main>
-            <Header />
             <Hero/>
         </main>
     );
