@@ -2,26 +2,26 @@
 @import "tailwindcss-animated";
 
 :root {
-	--background: #000b11;
-	--foreground: #fff;
-	--gradient: linear-gradient(
-		to bottom,
-		#000b11 0%,
-		#030914 20%,
-		#0b212e 60%,
-		#1e3a8a 95%
-	);
-	--primary-color: #0b212e;
-	--accent-color: #72b0fb;
-	--accent-color-light: #d9e1f4;
-	--accent-color-dark: rgb(43, 88, 144);
+    --background: #000b11;
+    --foreground: #fff;
+    --gradient: linear-gradient(
+        to bottom,
+        #000b11 0%,
+        #030914 20%,
+        #0b212e 60%,
+        #1e3a8a 95%
+    );
+    --primary-color: #0b212e;
+    --accent-color: #72b0fb;
+    --accent-color-light: #d9e1f4;
+    --accent-color-dark: rgb(43, 88, 144);
 }
 
 @theme inline {
-	--color-background: var(--background);
-	--color-foreground: var(--foreground);
-	--font-sans: var(--font-geist-sans);
-	--font-mono: var(--font-geist-mono);
+    --color-background: var(--background);
+    --color-foreground: var(--foreground);
+    --font-sans: var(--font-geist-sans);
+    --font-mono: var(--font-geist-mono);
 }
 
 /* @media (prefers-color-scheme: dark) {
@@ -31,8 +31,36 @@
   }
 } */
 
+@keyframes gradientPulse {
+    0%,
+    100% {
+        filter: brightness(0.5);
+    }
+    50% {
+        filter: brightness(1.05);
+    }
+}
+
 body {
-	background: var(--gradient);
-	color: var(--foreground);
-	font-family: Helvetica, sans-serif;
+    background-color: #000b11;
+    color: var(--foreground);
+    font-family: Helvetica, sans-serif;
+}
+
+body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: -1;
+    background: linear-gradient(
+        to bottom,
+        #000b11 0%,
+        #030914 20%,
+        #0b212e 60%,
+        #1e3a8a 95%
+    );
+    animation: gradientPulse 5s ease-in-out infinite;
 }
