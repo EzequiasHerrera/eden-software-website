@@ -1,13 +1,10 @@
+"use client";
 import FeaturedProduct from "./components/FeaturedProduct/FeaturedProduct";
-import Header from "./components/Header/Header";
 import Hero from "./components/Hero/Hero";
+import { useSmoothScrollOnScroll } from "./hooks/useSmoothScrollOnScroll";
 
 const Home = () => {
-    const handleScroll = () => {
-        document
-            .getElementById("next-section")
-            ?.scrollIntoView({ behavior: "smooth" });
-    };
+    useSmoothScrollOnScroll("featured-product", 1000);
 
     return (
         <main>

@@ -1,6 +1,6 @@
 const FeaturedProduct = () => {
   return (
-    <section className="flex flex-col w-full min-h-screen justify-center items-center">FeaturedProduct</section>
+    <section id="featured-product" className="flex flex-col w-full min-h-screen justify-center items-center">FeaturedProduct</section>
   )
 }
 
