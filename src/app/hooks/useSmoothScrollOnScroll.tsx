@@ -6,7 +6,8 @@ export const useSmoothScrollOnScroll = (id: string, duration = 1000) => {
             const target = document.getElementById(id);
             if (!target) return;
 
-            const targetY = target.getBoundingClientRect().top + window.scrollY;
+            const offset = 90;
+            const targetY = target.getBoundingClientRect().top + window.scrollY - offset;
             const startY = window.scrollY;
             const distance = targetY - startY;
             const startTime = performance.now();

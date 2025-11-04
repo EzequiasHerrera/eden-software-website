@@ -7,7 +7,7 @@ const Home = () => {
     useSmoothScrollOnScroll("featured-product", 1000);
 
     return (
-        <main>
+        <main className="mb-5">
             <Hero />
             <FeaturedProduct />
         </main>

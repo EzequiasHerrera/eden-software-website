@@ -23,7 +23,7 @@ const Button = ({ text, url, variant = "light" }: Props) => {
 	return (
 		<a
 			href={url}
-			className="transition hover:shadow-[0_0_40px_9px_rgba(168,129,254,0.9)]"
+			className="transition duration-200 ease-in-out rounded hover:shadow-[0_0_40px_9px_rgba(168,129,254,0.9)] max-h-min"
 		>
 			<button className={finalClasses}>{text}</button>
 		</a>
