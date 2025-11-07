@@ -1,0 +1,20 @@
+.priceBasic {
+    background-image: url(/images/background_light.webp);
+    background-size: cover;
+}
+.priceMedium {
+    background-image: linear-gradient(
+        to bottom,
+        #bebebe 0%,
+        #f1f1f1 20%,
+        #8f8f8f 60%,
+        #4e4e4e 95%
+    );
+}
+.pricePrime {
+    background-image: linear-gradient(
+        to bottom,
+        var(--accent-color) 0%,
+        var(--accent-color-light) 100%
+    );
+}

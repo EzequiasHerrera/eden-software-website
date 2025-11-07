@@ -32,7 +32,7 @@ const Header = () => {
                             About Us
                         </a>
                         <a
-                            href="#contact"
+                            href="/pricing"
                             className="hover:text-(--accent-color)">
                             Pricing
                         </a>

@@ -3,11 +3,12 @@ import styles from "./Button.module.css";
 type Props = {
 	text: string;
 	url: string;
+	full?: boolean;
 	variant?: "light" | "dark";
 };
 
-const Button = ({ text, url, variant = "light" }: Props) => {
-	const baseClasses = "px-4 py-2 rounded transition cursor-pointer";
+const Button = ({ text, url, full=false, variant = "light" }: Props) => {
+	const baseClasses = `px-4 py-2 rounded transition cursor-pointer ${full ? "w-full" : ""}`;
 
 	const lightClasses =
 		`bg-(--accent-color) hover:bg-(--accent-color-light) hover:text-(--primary-color) text-white ${styles.btn_shadow}`;
